@@ -5,7 +5,7 @@ import 'package:parqueadero_2025_g2/paso_parametros_ciclo_vida/views/cronometro/
 import 'package:parqueadero_2025_g2/paso_parametros_ciclo_vida/views/isolate/isolate_screen.dart';
 import 'package:parqueadero_2025_g2/paso_parametros_ciclo_vida/views/paso_parametros/detalle_screen.dart';
 import 'package:parqueadero_2025_g2/paso_parametros_ciclo_vida/views/paso_parametros/paso_parametros_screen.dart';
-import 'package:parqueadero_2025_g2/paso_parametros_ciclo_vida/views/tabbar_widget/vehiculos_screen.dart';
+import 'package:parqueadero_2025_g2/paso_parametros_ciclo_vida/views/tabbar_widget/comida_screen.dart';
 import 'package:parqueadero_2025_g2/paso_parametros_ciclo_vida/views/future/future_screen.dart';
 import 'package:parqueadero_2025_g2/paso_parametros_ciclo_vida/views/grid_tab/grid_tab_screen.dart';
 
