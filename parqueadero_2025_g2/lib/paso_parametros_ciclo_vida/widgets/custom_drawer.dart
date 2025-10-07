@@ -25,42 +25,22 @@ class CustomDrawer extends StatelessWidget {
               ),
             ),
           ),
+          //!INICIO
           ListTile(
             leading: const Icon(Icons.home),
             title: const Text('Inicio'),
             onTap: () {
-              //context.go('/'); // Navega a la ruta principal
-              //Reemplaza la ruta actual en la pila de navegación.
-              //No permite volver atrás automáticamente, ya que no agrega la nueva ruta a la pila.
-              //Útil para navegación sin historial, como en barra de navegación o cambiar de pestañas.
-              context.go('/'); // Navega a la ruta principal
+              context.go('/');
               Navigator.pop(context); // Cierra el drawer
             },
           ),
+          //!COMIDA
           ListTile(
-            leading: const Icon(Icons.settings),
-            title: const Text('Configuración'),
+            leading: const Icon(Icons.restaurant_menu),
+            title: const Text('Comida'),
             onTap: () {
-              //context.push(String route)
-              //Añade la nueva ruta a la pila de navegación.
-              //Permite volver atrás con context.pop().
-              //Ideal para flujos donde el usuario puede regresar, como navegar a una pantalla de detalles.
-              context.push(
-                '/settings',
-              ); // Navega a la pantalla de configuración
-              Navigator.pop(context); // Cierra el drawer
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.person),
-            title: const Text('Perfil'),
-            onTap: () {
-              //context.replace(String route)
-              //Similar a go(), pero en este caso reemplaza la ruta actual sin eliminar el historial anterior.
-              //Útil si quieres evitar que el usuario regrese a la pantalla anterior
-              //pero manteniendo la posibilidad de navegar hacia otras rutas en la pila
-              context.replace('/profile'); // Navega a la pantalla de perfil
-              Navigator.pop(context); // Cierra el drawer
+              context.push('/comida');
+              Navigator.pop(context);
             },
           ),
           //!PASO DE PARAMETROS
@@ -71,6 +51,7 @@ class CustomDrawer extends StatelessWidget {
               context.go('/paso_parametros');
             },
           ),
+          //!CICLO DE VIDA
           ListTile(
             leading: const Icon(Icons.loop),
             title: const Text('Ciclo de Vida'),
@@ -78,6 +59,7 @@ class CustomDrawer extends StatelessWidget {
               context.go('/ciclo_vida');
             },
           ),
+          //!GRID + TABS
           ListTile(
             leading: const Icon(Icons.grid_on),
             title: const Text("Grid + Tabs"),
@@ -85,8 +67,34 @@ class CustomDrawer extends StatelessWidget {
               context.go('/grid_tab');
               },
           ),
+          //!FUTURE
+          ListTile(
+            leading: const Icon(Icons.flag_circle),
+            title: const Text('Future'),
+            onTap: () {
+              context.go('/future');
+            },
+          ),
+          //!TIMER
+          ListTile(
+            leading: const Icon(Icons.timer),
+            title: const Text('Cronómetro'),
+            onTap: () {
+              context.go('/cronometro');
+            },
+          ),
+          //!ISOLATE
+          ListTile(
+            leading: const Icon(Icons.memory),
+            title: const Text('Isolate'),
+            onTap: () {
+              context.go('/isolate');
+            },
+          ),
         ],
       ),
     );
   }
 }
+
+
