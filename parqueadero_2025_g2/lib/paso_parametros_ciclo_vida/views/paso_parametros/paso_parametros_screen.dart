@@ -56,43 +56,74 @@ class PasoParametrosScreenState extends State<PasoParametrosScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text('Paso de Parámetros')),
       drawer: const CustomDrawer(),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextField(
-              //*asignamos el controlador al campo de texto
-              controller: controller,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Ingrese un valor',
+      body: Center(
+        child: SingleChildScrollView(
+          child: Card(
+            elevation: 8,
+            margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(Icons.input, size: 60, color: Colors.blueAccent),
+                  const SizedBox(height: 16),
+                  const Text(
+                    'Ingrese un valor para enviarlo a la pantalla de detalle usando diferentes métodos de navegación.',
+                    style: TextStyle(fontSize: 16),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 24),
+                  TextField(
+                    controller: controller,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      labelText: 'Ingrese un valor',
+                      prefixIcon: const Icon(Icons.edit),
+                    ),
+                  ),
+                  const SizedBox(height: 32),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ElevatedButton.icon(
+                        onPressed: () => goToDetalle('go'),
+                        icon: const Icon(Icons.arrow_forward),
+                        label: const Text('Go'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue,
+                          minimumSize: const Size(90, 45),
+                        ),
+                      ),
+                      ElevatedButton.icon(
+                        onPressed: () => goToDetalle('push'),
+                        icon: const Icon(Icons.add),
+                        label: const Text('Push'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green,
+                          minimumSize: const Size(90, 45),
+                        ),
+                      ),
+                      ElevatedButton.icon(
+                        onPressed: () => goToDetalle('replace'),
+                        icon: const Icon(Icons.swap_horiz),
+                        label: const Text('Replace'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          minimumSize: const Size(90, 45),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
-
-            SizedBox(
-              width: 150.0,
-              height: 100.0,
-              child: ElevatedButton(
-                onPressed: () => goToDetalle('go'),
-                child: const Text('Ir con Go'),
-              ),
-            ),
-
-            const SizedBox(height: 10),
-
-            ElevatedButton(
-              onPressed: () => goToDetalle('push'),
-              child: const Text('Ir con Push'),
-            ),
-
-            const SizedBox(height: 10),
-
-            ElevatedButton(
-              onPressed: () => goToDetalle('replace'),
-              child: const Text('Ir con Replace'),
-            ),
-          ],
+          ),
         ),
       ),
     );
