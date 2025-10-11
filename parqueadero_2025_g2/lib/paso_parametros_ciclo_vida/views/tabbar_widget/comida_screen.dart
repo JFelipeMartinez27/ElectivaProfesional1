@@ -19,95 +19,67 @@ class ComidaScreen extends StatelessWidget {
             labelColor: Colors.white,
           ),
         ),
-        body: const TabBarView(
+        body: TabBarView(
           children: [
-            // Motos
-            VehiculoGrid(
+            // comidas
+            ComidaGrid(
               items: [
-                VehiculoItem(
+                ComidaItem(
                   nombre: 'Manzana',
                   imageUrl:
                       'https://andreuprados.com/wp-content/uploads/2017/01/apple_0.jpg.webp',
                 ),
-                VehiculoItem(
+                ComidaItem(
                   nombre: 'Mango',
                   imageUrl:
                       'https://solofruver.com/wp-content/uploads/2020/06/mango.jpg.webp',
                 ),
-                VehiculoItem(
+                ComidaItem(
                   nombre: 'Sandia',
                   imageUrl:
                       'https://www.gob.mx/cms/uploads/article/main_image/39394/IMG_4111.JPG',
                 ),
-                VehiculoItem(
-                  nombre: 'Husqvarna 701',
-                  imageUrl:
-                      'https://www.motofichas.com/images/cache/10-husqvarna-701-supermoto-2023-estudio-01-398-a-mobile.jpg',
-                ),
-                VehiculoItem(
-                  nombre: 'BMW R1300GS',
-                  imageUrl:
-                      'https://content.media.mcdn.es/api/v1/mnet-media/images/c3/c349c7d3-1794-4a4a-9326-f5696a90745e?rule=mobileArticleBodyImage',
-                ),
-                VehiculoItem(
-                  nombre: 'Ktm 890 Adventure R',
-                  imageUrl:
-                      'https://www.secomoto.com/media/catalog/product/cache/16f0f75153821019f877160fc5b64d9a/m/o/moto-ktm-890-adventure-r-2025-8.jpg',
-                ),
+                
               ],
             ),
-            // Carros
-            VehiculoGrid(
+            // Quesos
+            ComidaGrid(
               items: [
-                VehiculoItem(
-                  nombre: 'BMW X6M',
+                ComidaItem(
+                  nombre: 'Mozarella',
                   imageUrl:
-                      'https://images.ctfassets.net/hbvlqhiip2ie/7dqMqkShzZNDXJApICuEJO/2d801876a50e36881dee872334095e1c/P90495557_highRes_the-new-bmw-x6-m-com_11zon.jpg?fit=fill&fm=webp&w=2880&h=1800',
+                      'https://simmerandsage.com/wp-content/uploads/2024/08/Homemade-Mozzarella1-1024x1024.jpg',
                 ),
-                VehiculoItem(
-                  nombre: 'Cadillac Escalade ',
+                ComidaItem(
+                  nombre: 'Parmesano',
                   imageUrl:
-                      'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/c3/f8/d3.jpg',
+                      'https://cheesemaking.com/cdn/shop/products/parmesan-style-cheese-making-recipe-565200.jpg?v=1759251845&width=600',
                 ),
-                VehiculoItem(
-                  nombre: 'Porche 911 GT3 RS',
+                ComidaItem(
+                  nombre: 'Gouda',
                   imageUrl:
-                      'https://media.carvia.com/Porsche%20GT3%20RS%20mieten-1920x1535.webp',
+                      'https://i0.wp.com/www.gastronoming.com/wp-content/uploads/2023/01/Queso-Gouda.jpg?w=900&ssl=1',
                 ),
-                VehiculoItem(
-                  nombre: 'Ford F-150 Raptor',
-                  imageUrl:
-                      'https://www.elcarrocolombiano.com/wp-content/uploads/2018/05/20180527-FORD-F-150-RAPTOR-2019-01.jpg',
-                ),
-                VehiculoItem(
-                  nombre: 'BMW M5',
-                  imageUrl:
-                      'https://hips.hearstapps.com/hmg-prod/images/bmw-m5-speed-yellow-015-67e52f11256bc.jpg?crop=0.822xw:0.694xh;0.100xw,0.293xh&resize=640:*',
-                ),
-                VehiculoItem(
-                  nombre: 'Mustang Shelby GT500',
-                  imageUrl:
-                      'https://hips.hearstapps.com/hmg-prod/images/2022-ford-mustang-shelby-gt500-02-1636734552.jpg?crop=1.00xw:0.891xh;0,0.0759xh&resize=1200:*',
-                ),
+                
               ],
             ),
-            // Buses
-            VehiculoGrid(
+            // Bebidas
+            ComidaGrid(
               items: [
-                VehiculoItem(
-                  nombre: 'Mercedes-Benz Bus',
+                ComidaItem(
+                  nombre: 'Frozen Margarita',
                   imageUrl:
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj_oLCeSFUMKXKK8LKvUacQpnREcWDrly9FQ&s',
+                      'https://www.liquor.com/thmb/V5L3hv-w8ph2_RQi_-simg-4Ris=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Frozen-Margarita-1500x1500-hero-191e49b3ab4f4781b93f3cfacac25136.jpg',
                 ),
-                VehiculoItem(
-                  nombre: 'Volvo Bus',
+                ComidaItem(
+                  nombre: 'Piña Colada',
                   imageUrl:
-                      'https://www.volvobuses.com/content/dam/volvo-buses/markets/global/classic/news/2019/1860x1050-volvo-9700-15m-variant.jpg',
+                      'https://cdn.shopify.com/s/files/1/0245/4464/1058/files/Untitled_480_x_480_px_9_480x480.jpg?v=1688264844',
                 ),
-                VehiculoItem(
-                  nombre: 'Scania Bus',
+                ComidaItem(
+                  nombre: 'Paloma cocktail',
                   imageUrl:
-                      'https://www.scania.com/content/dam/www/market/master/products/buses-and-coaches/travel-transport/scania-touring/scania-touring-24207-052_16-9.jpg.transform/Rend_1200X630/image.jpg',
+                      'https://www.oliveandmango.com/images/uploads/2021_07_24_paloma_cocktail_2.jpg',
                 ),
               ],
             ),
@@ -118,9 +90,9 @@ class ComidaScreen extends StatelessWidget {
   }
 }
 
-class VehiculoGrid extends StatelessWidget {
-  final List<VehiculoItem> items;
-  const VehiculoGrid({super.key, required this.items});
+class ComidaGrid extends StatelessWidget {
+  final List<ComidaItem> items;
+  const ComidaGrid({super.key, required this.items});
 
   @override
   Widget build(BuildContext context) {
@@ -176,8 +148,9 @@ class VehiculoGrid extends StatelessWidget {
   }
 }
 
-class VehiculoItem {
+
+class ComidaItem {
   final String nombre;
   final String imageUrl;
-  const VehiculoItem({required this.nombre, required this.imageUrl});
+  const ComidaItem({required this.nombre, required this.imageUrl});
 }
