@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:parqueadero_2025_g2/auth/session_manager.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -107,6 +108,26 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
               context.go('/dog_breeds');
+            },
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.verified_user),
+            title: const Text('Evidencia de sesión'),
+            onTap: () {
+              Navigator.pop(context);
+              context.go('/evidence');
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.logout, color: Colors.red),
+            title: const Text('Cerrar sesión'),
+            onTap: () async {
+              await SessionManager.clearAll();
+              if (context.mounted) {
+                Navigator.pop(context);
+                context.go('/login');
+              }
             },
           ),
         ],

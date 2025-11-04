@@ -10,12 +10,33 @@ import 'package:parqueadero_2025_g2/views/future/future_screen.dart';
 import 'package:parqueadero_2025_g2/views/grid_tab/grid_tab_screen.dart';
 import 'package:parqueadero_2025_g2/views/dog_view/breed_list_screen.dart';
 import 'package:parqueadero_2025_g2/views/dog_view/breed_detail_screen.dart';
-import 'package:parqueadero_2025_g2/models/dog_breed.dart'; // ✅ IMPORTANTE: Agregar esta importación
+import 'package:parqueadero_2025_g2/models/dog_breed.dart'; // IMPORTANTE: Agregar esta importación
+import 'package:parqueadero_2025_g2/auth/auth_gate.dart';
+import 'package:parqueadero_2025_g2/auth/login_screen.dart';
+import 'package:parqueadero_2025_g2/auth/evidence_screen.dart';
+import 'package:parqueadero_2025_g2/auth/register_screen.dart';
 
 import '../views/home/home_screen.dart';
 
 final GoRouter appRouter = GoRouter(
+  initialLocation: '/auth',
   routes: [
+    GoRoute(
+      path: '/auth',
+      builder: (context, state) => const AuthGate(),
+    ),
+    GoRoute(
+      path: '/login',
+      builder: (context, state) => const LoginScreen(),
+    ),
+    GoRoute(
+      path: '/register',
+      builder: (context, state) => const RegisterScreen(),
+    ),
+    GoRoute(
+      path: '/evidence',
+      builder: (context, state) => const EvidenceScreen(),
+    ),
     GoRoute(
       path: '/',
       builder: (context, state) => const HomeScreen(), // Usa HomeView
