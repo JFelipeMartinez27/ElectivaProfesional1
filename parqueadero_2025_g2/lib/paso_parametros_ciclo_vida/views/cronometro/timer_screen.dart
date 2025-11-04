@@ -77,8 +77,8 @@ class _TimerScreenState extends State<TimerScreen> {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(16),
-            child: Image(
-              image: const NetworkImage(
+            child: const Image(
+              image: NetworkImage(
                 'https://previews.123rf.com/images/dja65/dja651310/dja65131000054/22974090-old-stopwatch-isolated-on-white.jpg',
               ),
               width: 300,

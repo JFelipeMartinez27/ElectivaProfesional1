@@ -10,7 +10,7 @@ class ComidaScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Comida'),
-          bottom: TabBar(
+          bottom: const TabBar(
             tabs: [
               Tab(icon: Icon(Icons.apple), text: 'Frutas'),
               Tab(icon: Icon(Icons.cookie), text: 'Quesos'),
@@ -19,7 +19,7 @@ class ComidaScreen extends StatelessWidget {
             labelColor: Colors.white,
           ),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
             // comidas
             ComidaGrid(
