@@ -9,8 +9,22 @@ class BaseView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final canPop = Navigator.of(context).canPop();
     return Scaffold(
-      appBar: AppBar(title: Text(title)),
+      appBar: AppBar(
+        title: Text(title),
+        automaticallyImplyLeading: false,
+        leading: canPop ? const BackButton() : null,
+        actions: [
+          Builder(
+            builder: (ctx) => IconButton(
+              tooltip: 'Menú',
+              icon: const Icon(Icons.menu),
+              onPressed: () => Scaffold.of(ctx).openDrawer(),
+            ),
+          ),
+        ],
+      ),
       drawer: const CustomDrawer(),
       body: body,
     );
