@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'session_manager.dart';
+import 'package:parqueadero_2025_g2/widgets/base_view.dart';
 
 class EvidenceScreen extends StatefulWidget {
   const EvidenceScreen({super.key});
@@ -42,8 +43,8 @@ class _EvidenceScreenState extends State<EvidenceScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Evidencia de sesión')),
+    return BaseView(
+      title: 'Evidencia de sesión',
       body: _loading
           ? const Center(child: CircularProgressIndicator())
           : Padding(

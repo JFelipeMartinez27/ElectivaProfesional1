@@ -32,6 +32,15 @@ class CustomDrawer extends StatelessWidget {
               Navigator.pop(context);
             },
           ),
+          //!UNIVERSIDADES
+          ListTile(
+            leading: const Icon(Icons.school),
+            title: const Text('Universidades'),
+            onTap: () {
+              context.go('/universidades');
+              Navigator.pop(context);
+            },
+          ),
           //!COMIDA
           ListTile(
             leading: const Icon(Icons.restaurant_menu),
