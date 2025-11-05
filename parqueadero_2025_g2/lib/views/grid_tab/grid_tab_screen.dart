@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../widgets/custom_drawer.dart';
 
 class GridTabScreen extends StatefulWidget {
   const GridTabScreen({super.key});
@@ -40,7 +41,17 @@ class _GridTabScreenState extends State<GridTabScreen> {
               Tab(icon: Icon(Icons.grid_on), text: "Juego"),
             ],
           ),
+          actions: [
+            Builder(
+              builder: (ctx) => IconButton(
+                tooltip: 'Menú',
+                icon: const Icon(Icons.menu),
+                onPressed: () => Scaffold.of(ctx).openDrawer(),
+              ),
+            ),
+          ],
         ),
+        drawer: const CustomDrawer(),
         body: TabBarView(
           children: [
             Column(

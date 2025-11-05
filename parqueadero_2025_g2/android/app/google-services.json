@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "348914880039",
+    "project_id": "parqueadero-2025-g2",
+    "storage_bucket": "parqueadero-2025-g2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348914880039:android:c4c1f0fbd4ff698477c802",
+        "android_client_info": {
+          "package_name": "com.example.parqueadero_2025_g2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALsl9PSuzoST0rC0nj75pVVtCTj2eHMRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -15,6 +15,9 @@ import 'package:parqueadero_2025_g2/auth/auth_gate.dart';
 import 'package:parqueadero_2025_g2/auth/login_screen.dart';
 import 'package:parqueadero_2025_g2/auth/evidence_screen.dart';
 import 'package:parqueadero_2025_g2/auth/register_screen.dart';
+import 'package:parqueadero_2025_g2/universidades/universities_list_screen.dart';
+import 'package:parqueadero_2025_g2/universidades/university_form_screen.dart';
+import 'package:parqueadero_2025_g2/universidades/university.dart';
 
 import '../views/home/home_screen.dart';
 
@@ -41,14 +44,26 @@ final GoRouter appRouter = GoRouter(
       path: '/',
       builder: (context, state) => const HomeScreen(), // Usa HomeView
     ),
+    //! Universidades
+    GoRoute(
+      path: '/universidades',
+      name: 'universidades',
+      builder: (context, state) => const UniversitiesListScreen(),
+    ),
+    GoRoute(
+      path: '/universidades/nueva',
+      name: 'universidades_nueva',
+      builder: (context, state) => UniversityFormScreen(
+        university: state.extra is University ? state.extra as University : null,
+      ),
+    ),
     // Rutas para el paso de parámetros
     GoRoute(
       path: '/paso_parametros',
       name: 'paso_parametros',
       builder: (context, state) => const PasoParametrosScreen(),
     ),
-
-    // !Ruta para el detalle con parámetros
+    //!Ruta para el detalle con parámetros
     GoRoute(
       path:
           '/detalle/:parametro/:metodo', //la ruta recibe dos parametros los " : " indican que son parametros
